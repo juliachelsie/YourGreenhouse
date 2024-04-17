@@ -1,0 +1,27 @@
+html {
+    height: 100%;
+}
+
+.main-bg {
+    background: url('/media/background.jpg') no-repeat center center fixed;;
+    background-size: cover;
+    color: #555;
+
+}
+
+.navbar-logo {
+    font-size: 1.7rem;
+    font-weight: 500;
+    color: #1f3a1e;
+    text-decoration: none;
+}
+
+.navbar-logo:hover {
+    color:#52a84f;
+    transition: all 0.3s linear;
+}
+
+
+.follow {
+    color: #1f3a1e
+}
