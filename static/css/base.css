@@ -3,10 +3,8 @@ html {
 }
 
 .main-bg {
-    background: url('/media/background.jpg') no-repeat center center fixed;;
+    background: url('/static/background.jpg') no-repeat center center fixed;;
     background-size: cover;
-    color: #555;
-
 }
 
 .navbar-logo {
@@ -21,7 +19,64 @@ html {
     transition: all 0.3s linear;
 }
 
+.navbar {
+    border: #555;
+}
 
+#about {
+    padding-top: 170px;
+    padding-left: 70px;
+}
+
+.welcome {
+    color: #1f3a1e;
+}
+
+#content-link {
+    text-align: center;
+    padding-bottom: 30px;
+    width: auto;
+    padding-top: 30px;
+    list-style-type: none;
+    text-decoration: none;
+}
+.content-link {
+    text-decoration: none;
+    list-style-type: none;
+    color:#1f3a1e;
+    transition: all 0.3s linear;
+    font-size: 17px;
+}
+
+.writer {
+    color: white;
+    margin: 4px;
+    text-transform: uppercase;
+}
+
+.page-change:hover {
+    color: #E84610;
+}
+
+/* Footer */
 .follow {
     color: #1f3a1e
+}
+
+.follow a:hover {
+    color:#52a84f;
+    transition: all 0.3s linear;
+ }
+
+#social-networks {
+    justify-content: space-evenly;
+    list-style-type: none;
+    display: flex;
+    padding-left: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 350px;
+    font-size: 23px;
+    transition: all 0.3s linear;
+    padding-top: 15px;
 }
