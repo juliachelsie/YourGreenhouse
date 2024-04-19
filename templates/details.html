@@ -70,7 +70,7 @@
             <div class="card-body">
                 {% if user.is_authenticated %}
                     <h4>Leave a comment on this post:</h4>
-                    <p>Posting as: {{ comment.name }}</p>
+                    <p>Posting as: {{ user.username }}</p>
                     <form method="POST">
                         {{ comment_on_form | crispy }}
                         {% csrf_token %}
