@@ -24,7 +24,7 @@ class Post(models.Model):
         return self.title
 
     def likes_number(self):
-        return self.ikes.count()
+        return self.likes.count()
 
 class CommentOn(models.Model):
     post = models.ForeignKey(Post, on_delete=models.CASCADE, related_name='comment')

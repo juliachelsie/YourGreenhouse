@@ -1,0 +1,85 @@
+{% extends 'base.html' %}
+{% block content %}
+{% load crispy_forms_tags %}
+
+<div class="post-content">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 post-content-text">
+                <h1 class="post-content-title">{{ post.title }}</h1>
+                <p class="post-content-subtitle">{{ post.writer }} {{ post.created }}</p>
+            </div>
+            <div class="d-none d-md-block col-md-6 post-content-image">
+                {% if "placeholder" in post.chosen_image.url %}
+                <img src="/static/blog.jpg" width="100%">
+                {% else %}
+                <img src="{{ post.chosen_image.url }}" width="100%">
+                {% endif %}
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <div class="row">
+        <div class="col card mb-4  mt-3 left  top">
+            <div class="card-body">
+                <p class="card-text ">{{ post.content | safe }}</p>
+                <div class="row">
+
+                    <div class="col-1">
+                        <strong class="text-secondary">
+                            <i class="fa-solid fa-heart" style="color: #f50000;"></i>
+                            {{ post.likes_number }}
+                        </strong>
+                    </div>
+                    <div class="col-1">
+                        {% with comment.count as total_comments %}
+                        <strong class="text-secondary"><i class="fa-solid fa-comment" style="color: #1f3a1e;"></i>
+                            {{ total_comments }}
+                        </strong>
+                        {% endwith %}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col">
+            <hr>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col card mb-4  mt-3 ">
+            <h3>Comments:</h3>
+            <div class="card-body">
+                {% for comment in comments %}
+                <div class="comments" style="padding: 10px;">
+                    <p class="font-weight-bold">
+                        {{ commenton.name }}
+                        <span class=" text-muted font-weight-normal">
+                            {{ commenton.created }}
+                        </span> wrote:
+                    </p>
+                    {{ commenton.body | linebreaks }}
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+        <div class="col-md-8 card mb-4  mt-3 ">
+            <div class="card-body">
+                {% if user.is_authenticated %}
+                    <h4>Leave a comment on this post:</h4>
+                    <p>Posting as: {{ comment.name }}</p>
+                    <form method="POST">
+                        {{ comment_on_form | crispy }}
+                        {% csrf_token %}
+                        <button class="btn btn-signup btn-lg">Submit</button>
+                    </form>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock content %}

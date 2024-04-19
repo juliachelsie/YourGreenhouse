@@ -4,7 +4,12 @@
 <html class="h-100">
 
   <head>
+    <!--Title-->
       <title>Your GreenHouse</title>
+    <!--Favicon-->
+      <link rel="apple-touch-icon" href="static/favicon/apple-touch-icon.png" sizes="180x180">
+      <link rel="icon" type="image/png" href="static/favicon/favicon-16x16.png" sizes="16x16">
+      <link rel="icon" type="image/png" href="static/favicon/favicon_io/favicon-32x32.png" sizes="32x32">
 
       <link rel="preconnect" href="https://fonts.gstatic.com">
       <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
@@ -33,27 +38,24 @@
                   aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
                   <span class="navbar-toggler-icon"></span>
               </button>
-              <div class="collapse navbar-collapse" id="navbarText">
-                  <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <div class="collapse navbar-collapse justify-content-end" id="navbarText">
+                  <ul class="navbar-nav">
                       <li class="nav-item">
                           <a class="nav-link active" aria-current="page" href="{% url 'home' %}">Home</a>
                       </li>
                       {% if user.is_authenticated %}
                       <li class="nav-item">
-                          <a class="nav-link" href="#">Logout</a>
+                          <a class="nav-link" href="{% url 'account_logout' %}">Logout</a>
                       </li>
                       {% else %}
                       <li class="nav-item">
-                          <a class="nav-link" href="#">Register</a>
+                          <a class="nav-link" href="{% url 'account_signup' %}">Sign Up</a>
                       </li>
                       <li class="nav-item">
-                          <a class="nav-link" href="#">Login</a>
+                          <a class="nav-link" href="{% url 'account_login' %}">Login</a>
                       </li>
                       {% endif %}
                   </ul>
-                  <span class="navbar-text text-muted">
-                      Your Online GreenHouse
-                  </span>
               </div>
           </div>
       </nav>

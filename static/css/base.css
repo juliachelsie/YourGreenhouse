@@ -3,7 +3,7 @@ html {
 }
 
 .main-bg {
-    background: url('/static/background.jpg') no-repeat center center fixed;;
+    background: url('/static/background.jpg') no-repeat center center fixed;
     background-size: cover;
 }
 
@@ -49,13 +49,73 @@ html {
 }
 
 .writer {
-    color: white;
+    color: #1f1e1e;
     margin: 4px;
     text-transform: uppercase;
 }
 
+.writer-info {
+    position: absolute;
+    bottom: 5%;
+    min-width: 30%;
+    left: -2px;
+    background-color: #d6f2da;
+}
+
+.image-container {
+    position: relative;
+}
+
+.card {
+    border: #1f3a1e ;
+    background-color: transparent;
+}
+
+
 .page-change:hover {
     color: #E84610;
+}
+
+.post-content {
+    margin-top: 10px;
+    overflow: hidden;
+    position: relative;
+    display: inline-block;
+    height: 33vh;
+    width: 100%;
+}
+
+.post-content-text {
+    background-color: #1f3a1e;;
+    color: white;
+    position: relative;
+    text-align: center;
+    padding-top: 67px;
+}
+
+.post-content-image {
+    position: relative;
+    overflow: hidden;
+}
+
+.post-content-image:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 90%;
+    height: 100%;
+    width: 150%;
+    background: #1f3a1e;
+    z-index: 100;
+}
+
+.postLink {
+    text-decoration: none;
+}
+
+.card-title {
+    margin-bottom: 15px;
+    color:#1f1e1e
 }
 
 /* Footer */

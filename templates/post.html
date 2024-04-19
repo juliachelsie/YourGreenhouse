@@ -6,26 +6,26 @@
     <div class="row">
         <div class="col-12 mt-3 left">
             <div class="row">
-                {% for post in viewList %}
+                {% for post in post_list %}
                     <div class="col-md-4">
                         <div class="card mb-4">
                             <div class="card-body">
                                 <div class="image-container">
                                     {% if "placeholder" in post.chosen_image.url %}
-                                    <img src="/media/blog.jpg" alt="Image of blocks spelling the word Blog" class="card-img-top">
+                                    <img src="/static/blog.jpg" alt="Image of blocks spelling the word Blog" class="card-img-top">
                                     {% else %}
                                     <img src="{{ post.chosen_image.url }}" alt="" class="card-img-top">
                                     {% endif %}
-                                    <div class="image-flash">
+                                    <div class="writer-info">
                                         <p class="writer">Writer: {{ post.writer }}</p>
                                     </div>
                                 </div>
-                                <a href="#" class="postLink">
+                                <a href="{% url 'details.html' post.slug %}" class="postLink">
                                     <h2 class="card-title">{{ post.title }}</h2>
                                     <p class="card-text">{{ post.excerpt }}</p>
                                 </a>
                                 <p class="card-text h5">{{ post.created }}
-                                    <i class="fa-solid fa-heart" style="color: #f50000;"></i>{{ post.likes }}
+                                    <i class="fa-solid fa-heart" style="color: #f50000;"></i>{{ post.likes_number }}
                                 </p>
                             </div>
                         </div>
