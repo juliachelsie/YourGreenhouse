@@ -50,24 +50,30 @@
         </div>
     </div>
     <div class="row">
-        <div class="col card mb-4  mt-3 ">
-            <h3>Comments:</h3>
+        <div class="col-md-8 card mb-4  mt-3 ">
+            <h4>Comments:</h4>
             <div class="card-body">
-                {% for comment in comments %}
+                {% for comment in comment %}
                 <div class="comments" style="padding: 10px;">
                     <p class="font-weight-bold">
-                        {{ commenton.name }}
+                        <strong>{{ comment.name }}
                         <span class=" text-muted font-weight-normal">
-                            {{ commenton.created }}
+                            {{ comment.created }}
                         </span> wrote:
-                    </p>
-                    {{ commenton.body | linebreaks }}
-                </div>
+                    </p> </strong>
+                    {{ comment.body | linebreaks }}
+                </div> <hr>
                 {% endfor %}
             </div>
         </div>
         <div class="col-md-8 card mb-4  mt-3 ">
             <div class="card-body">
+                {% if commented %}
+                <div class="alert alert-success" role="alert">
+                    Your comment is waiting for approval
+                </div>
+                {% else %}
+
                 {% if user.is_authenticated %}
                     <h4>Leave a comment on this post:</h4>
                     <p>Posting as: {{ user.username }}</p>
@@ -76,6 +82,7 @@
                         {% csrf_token %}
                         <button class="btn btn-signup btn-lg">Submit</button>
                     </form>
+                {% endif %}
                 {% endif %}
             </div>
         </div>
