@@ -28,10 +28,26 @@
                 <div class="row">
 
                     <div class="col-1">
-                        <strong class="text-secondary">
-                            <i class="fa-solid fa-heart" style="color: #f50000;"></i>
-                            {{ post.likes_number }}
-                        </strong>
+                        {% if user.is_authenticated %}
+                        <form action="{% url 'like' post.slug %}" class="d-inline" method="POST">
+                            {% csrf_token %}
+                            {% if liked %}
+                            <button class="like-button" value="{{ post.slug }}" name="post-id" type="submit">
+                                <i class="fa-solid fa-heart"></i>
+                            </button>
+
+                            {% else %}
+                            <button class="like-button" value="{{ post.slug }}" name="post-id" type="submit">
+                                <i class="far fa-heart"></i>
+                            </button>
+
+                            {% endif %}
+                        </form>
+                        {% else %}
+                        <span class="text-secondary"><i class="fa-solid fa-heart" style="color: #f50000;"></i></span>
+                        {% endif %}
+                        <span class="text-secondary">{{ post.likes_number }}</span>
+                        
                     </div>
                     <div class="col-1">
                         {% with comment.count as total_comments %}

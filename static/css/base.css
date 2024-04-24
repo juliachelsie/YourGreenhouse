@@ -122,6 +122,19 @@ html {
     border: #1f1e1e;
 }
 
+.like-button {
+    color: #f50000;
+    background: transparent;
+    border: none;
+}
+
+.like-button:hover,
+.like-button:active {
+    color: #f50000;
+    background: transparent;
+    border: none;
+
+}
 /* Footer */
 .follow {
     color: #1f3a1e
