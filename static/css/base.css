@@ -71,9 +71,13 @@ html {
     background-color: transparent;
 }
 
-
-.page-change:hover {
-    color: #E84610;
+#change-page {
+    list-style-type: none;
+}
+.page-change {
+    color: #1f3a1e;
+    text-decoration: none;
+    font-size: 20px;
 }
 
 .post-content {
@@ -135,6 +139,7 @@ html {
     border: none;
 
 }
+
 /* Footer */
 .follow {
     color: #1f3a1e

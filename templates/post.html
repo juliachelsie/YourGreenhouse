@@ -41,7 +41,7 @@
     </div>
     {% if is_paginated %}
     <nav aria-label="Page Navigation">
-        <ul class="justify-content-center">
+        <ul class="justify-content-center" id="change-page">
             {% if page_obj.has_previous %}
             <li><a href="?page={{ page_obj.previous_page_number }}" class="page-change">&laquo; Previous</a></li>
             {% endif %}
