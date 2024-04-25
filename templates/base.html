@@ -3,64 +3,70 @@
 <!DOCTYPE html>
 <html class="h-100">
 
-  <head>
+<head>
     <!--Title-->
-      <title>Your GreenHouse</title>
+    <title>Your GreenHouse</title>
     <!--Favicon-->
-      <link rel="apple-touch-icon" href="static/favicon/apple-touch-icon.png" sizes="180x180">
-      <link rel="icon" type="image/png" href="static/favicon/favicon-16x16.png" sizes="16x16">
-      <link rel="icon" type="image/png" href="static/favicon/favicon_io/favicon-32x32.png" sizes="32x32">
+    <link rel="apple-touch-icon" href="static/favicon/apple-touch-icon.png" sizes="180x180">
+    <link rel="icon" type="image/png" href="static/favicon/favicon-16x16.png" sizes="16x16">
+    <link rel="icon" type="image/png" href="static/favicon/favicon_io/favicon-32x32.png" sizes="32x32">
 
-      <link rel="preconnect" href="https://fonts.gstatic.com">
-      <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
-      <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;700&display=swap" rel="stylesheet">
-      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-      <meta name="viewport" content="width=device-width, initial-scale=1" />
-      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
-          integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
-      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
-          integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous">
-      </script>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous">
+    </script>
       <!--Font Awesome-->
-      <script src="https://kit.fontawesome.com/032f9bfe1a.js" crossorigin="anonymous"></script>
-      <link rel="stylesheet" href="{% static 'css/base.css' %}">
+    <script src="https://kit.fontawesome.com/032f9bfe1a.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="{% static 'css/base.css' %}">
 
-  </head>
+</head>
 
-  <body class="d-flex flex-column h-100 main-bg">
+<body class="d-flex flex-column h-100 main-bg">
 
-      <!-- Navigation -->
+    <!-- Navigation -->
 
-      <nav class="navbar navbar-expand-lg navbar-light bg-white">
-          <div class="container-fluid">
-              <a class="navbar-logo" href="{% url 'home' %}">Your GreenHouse <i class="fa-brands fa-pagelines" style="color: #1f3a1e;"></i></a>
-              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText"
-                  aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
-                  <span class="navbar-toggler-icon"></span>
-              </button>
-              <div class="collapse navbar-collapse justify-content-end" id="navbarText">
-                  <ul class="navbar-nav">
-                      <li class="nav-item">
-                          <a class="nav-link active" aria-current="page" href="{% url 'home' %}">Home</a>
-                      </li>
-                      {% if user.is_authenticated %}
-                      <li class="nav-item">
-                          <a class="nav-link" href="{% url 'account_logout' %}">Logout</a>
-                      </li>
-                      {% else %}
-                      <li class="nav-item">
-                          <a class="nav-link" href="{% url 'account_signup' %}">Register</a>
-                      </li>
-                      <li class="nav-item">
-                          <a class="nav-link" href="{% url 'account_login' %}">Login</a>
-                      </li>
-                      {% endif %}
-                  </ul>
-              </div>
-          </div>
-      </nav>
+    <nav class="navbar navbar-expand-lg navbar-light bg-white">
+        <div class="container-fluid">
+            <a class="navbar-logo" href="{% url 'home' %}">Your GreenHouse <i class="fa-brands fa-pagelines" style="color: #1f3a1e;"></i></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText"
+                aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarText">
+                <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="{% url 'home' %}">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'post.html' %}">Blog</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'contact.html' %}">Contact Us</a>
+                </li>
+                    {% if user.is_authenticated %}
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'account_logout' %}">Logout</a>
+                </li>
+                    {% else %}
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'account_signup' %}">Register</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'account_login' %}">Login</a>
+                </li>
+                    {% endif %}
+            </ul>
+            </div>
+        </div>
+    </nav>
 
-      <div class="container">
+    <div class="container">
         <div class="row">
             <div class="col-md-8 offset-md-2">
                 {% for message in messages %}
@@ -68,39 +74,39 @@
                     {{ message | safe }}
                     <button class="btn-close" type="button" ara-label="Close" data-bs-dismiss="alert"></button>
                 </div>
-                {% endfor %}
+                    {% endfor %}
             </div>
         </div>
-      </div>
+    </div>
 
-      <main class="flex-shrink-0 main-bg">
-          {% block content %}
-          <!-- Content Goes here -->
-          {% endblock content %}
-      </main>
-      <!-- Footer -->
-      <footer class="footer mt-auto py-3 bg-white">
-            <p class="m-0 text-center follow">Follow us: <br> 
-                <a href="https://www.facebook.com/"
-                target="_blank" rel="noopener" aria-label="Visit our Facebook page (opens in new tab)">
-                <i class="fa-brands fa-facebook" style="color: #1f3a1e;"></i></a>
-                <a href="https://www.instagram.com/" target="_blank"
-                rel="noopener" aria-label="Visit our Instagram page (opens in new tab)">
-                <i class="fa-brands fa-instagram" style="color: #1f3a1e;"></i></a>
-                <a href="https://twitter.com/" target="_blank" rel="noopener"
-                aria-label="Visit our Twitter page (opens in new tab)">
-                <i class="fa-brands fa-x-twitter" style="color: #1f3a1e;"></i></a>
-            </p>
-      </footer>
+    <main class="flex-shrink-0 main-bg">
+        {% block content %}
+        <!-- Content Goes here -->
+        {% endblock content %}
+    </main>
+    <!-- Footer -->
+    <footer class="footer mt-auto py-3 bg-white">
+        <p class="m-0 text-center follow">Follow us: <br> 
+            <a href="https://www.facebook.com/"
+            target="_blank" rel="noopener" aria-label="Visit our Facebook page (opens in new tab)">
+            <i cass="fa-brands fa-facebook" style="color: #1f3a1e;"></i></a>
+            <a href="https://www.instagram.com/" target="_blank"
+            rel="noopener" aria-label="Visit our Instagram page (opens in new tab)">
+            <i class="fa-brands fa-instagram" style="color: #1f3a1e;"></i></a>
+            <a href="https://twitter.com/" target="_blank" rel="noopener"
+            aria-label="Visit our Twitter page (opens in new tab)">
+            <i class="fa-brands fa-x-twitter" style="color: #1f3a1e;"></i></a>
+        </p>
+    </footer>
 
-      <!--Javascript function that closes alert messages-->
-      <script>
-        setTimeout(function() {
-            let message = document.getElementById('alert-message');
-            let alert = new bootstrap.Alert(message);
-            alert.close();
-        }, 2000);
-      </script>
-  </body>
+    <!--Javascript function that closes alert messages-->
+    <script>
+    setTimeout(function() {
+        let message = document.getElementById('alert-message');
+        let alert = new bootstrap.Alert(message);
+        alert.close();
+    }, 2000);
+    </script>
+</body>
 
 </html>

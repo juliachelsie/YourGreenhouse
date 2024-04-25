@@ -2,7 +2,7 @@ from django.shortcuts import render, get_object_or_404, reverse
 from django.views import generic, View
 from .models import Post
 from django.http import HttpResponseRedirect
-from .forms import CommentOnForm
+from .forms import CommentOnForm, ContactForm
 
 def get_index(request):
     return render(request, 'index.html')
@@ -10,6 +10,10 @@ def get_index(request):
 
 def get_post(request):
     return render(request, 'post.html')
+
+def get_contact(request):
+    return render(request, 'contact.html')
+
 
 class PostList(generic.ListView):
     model = Post
@@ -83,3 +87,9 @@ class Like(View):
             post.likes.add(request.user)
 
         return HttpResponseRedirect(reverse('details.html', args=[slug]))
+
+
+def contact_view(request):
+    form = ContactForm()
+    context = {'form': form}
+    return render(request, 'contact.html', context)
