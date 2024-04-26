@@ -20,7 +20,7 @@
                                         <p class="writer">Writer: {{ post.writer }}</p>
                                     </div>
                                 </div>
-                                <a href="{% url 'details.html' post.slug %}" class="postLink">
+                                <a href="{% url 'details.html' post.slug %}" aria-label="Button leading to blogpost" class="postLink">
                                     <h2 class="card-title">{{ post.title }}</h2>
                                     <p class="card-text">{{ post.excerpt }}</p>
                                 </a>
@@ -43,10 +43,10 @@
     <nav aria-label="Page Navigation">
         <ul class="justify-content-center" id="change-page">
             {% if page_obj.has_previous %}
-            <li><a href="?page={{ page_obj.previous_page_number }}" class="page-change">&laquo; Previous</a></li>
+            <li><a href="?page={{ page_obj.previous_page_number }}" aria-label="Button leading to the previous page" class="page-change">&laquo; Previous</a></li>
             {% endif %}
             {% if page_obj.has_next %}
-            <li><a href="?page={{ page_obj.next_page_number }}" class="page-change">Next &raquo;</a></li>
+            <li><a href="?page={{ page_obj.next_page_number }}" aria-label="Button leading to the next page" class="page-change">Next &raquo;</a></li>
             {% endif %}
         </ul>
     </nav>

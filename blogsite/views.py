@@ -3,6 +3,7 @@ from django.views import generic, View
 from .models import Post
 from django.http import HttpResponseRedirect
 from .forms import CommentOnForm, ContactForm
+from django.contrib import messages
 
 def get_index(request):
     return render(request, 'index.html')
@@ -90,6 +91,12 @@ class Like(View):
 
 
 def contact_view(request):
-    form = ContactForm()
-    context = {'form': form}
+    if request.method == 'POST':
+        contactform = ContactForm(data=request.POST)
+        if contactform.is_valid():
+            contactform.save()
+            messages.success(request, 'Message Sent!')
+            return render(request, 'index.html')
+    contactform = ContactForm()
+    context = {'contactform': contactform}
     return render(request, 'contact.html', context)

@@ -32,12 +32,12 @@
                         <form action="{% url 'like' post.slug %}" class="d-inline" method="POST">
                             {% csrf_token %}
                             {% if liked %}
-                            <button class="like-button" value="{{ post.slug }}" name="post-id" type="submit">
+                            <button class="like-button" aria-label="Like Button" value="{{ post.slug }}" name="post-id" type="submit">
                                 <i class="fa-solid fa-heart"></i>
                             </button>
 
                             {% else %}
-                            <button class="like-button" value="{{ post.slug }}" name="post-id" type="submit">
+                            <button class="like-button" aria-label="Like Button" value="{{ post.slug }}" name="post-id" type="submit">
                                 <i class="far fa-heart"></i>
                             </button>
 
@@ -96,7 +96,7 @@
                     <form method="POST">
                         {{ comment_on_form | crispy }}
                         {% csrf_token %}
-                        <button class="btn btn-signup btn-lg">Submit</button>
+                        <button aria-label="Button to submit comment" class="btn btn-signup btn-lg">Submit</button>
                     </form>
                 {% endif %}
                 {% endif %}

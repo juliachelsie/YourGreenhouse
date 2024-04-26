@@ -20,7 +20,7 @@ html {
 }
 
 .navbar {
-    border: #555;
+    border-bottom-style: groove;
 }
 
 #about {
@@ -28,7 +28,7 @@ html {
     padding-left: 70px;
 }
 
-.welcome {
+.information-text {
     color: #1f3a1e;
 }
 
@@ -140,7 +140,22 @@ html {
 
 }
 
+/* About page */
+
+#contact {
+    padding-top: 170px;
+    padding-left: 70px;
+}
+
+.form-btn {
+    margin-top: 10px;
+}
+
 /* Footer */
+
+footer {
+    border-top-style: groove;
+}
 .follow {
     color: #1f3a1e
 }

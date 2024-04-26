@@ -2,14 +2,28 @@
 {% load static %}
 {% block content %}
 {% load crispy_forms_tags %}
-<div class="col-md-8 card mb-4  mt-3 ">
-    <div class="card-body">
-        <div class="col-1">
-            <form action="" method="POST">
-            {% csrf_token %}
-            {{ contactform | crispy }}
-            </form> 
+
+<section id="contact" class="container-fluid">
+    <h2 class="display-4 logo information-text">Contact Form</h2>
+    <p class="information-text">Would you like to write articles and/or blog posts for us?<br>
+    Fill out the form below and tell us a little about yourself and we will contact you.</p>
+    <hr>
+    <div class="row h-100">
+        <div class="col-7 col-md-4 my-auto">
+            <div class="row">
+                <div class="">
+                    <div class="card-body">
+                        <div class="col-12">
+                            <form method="POST">
+                            {{ contactform | crispy }}
+                            {% csrf_token %}
+                            <button aria-label="Button to send message" class="btn btn-signup btn-lg">Send Message</button>
+                            </form> 
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
-</div>
+</section>
 {% endblock %}
