@@ -5,12 +5,14 @@ from django.http import HttpResponseRedirect
 from .forms import CommentOnForm, ContactForm
 from django.contrib import messages
 
+
 def get_index(request):
     return render(request, 'index.html')
 
 
 def get_post(request):
     return render(request, 'post.html')
+
 
 def get_contact(request):
     return render(request, 'contact.html')
@@ -24,9 +26,7 @@ class PostList(generic.ListView):
 
 
 class Details(View):
-
     def get(self, request, slug, *args, **kwargs):
-        
         queryset = Post.objects.filter(status=1)
         post = get_object_or_404(queryset, slug=slug)
         comment = post.comment.filter(approved=True).order_by("-created")
@@ -47,7 +47,6 @@ class Details(View):
         )
 
     def post(self, request, slug, *args, **kwargs):
-        
         queryset = Post.objects.filter(status=1)
         post = get_object_or_404(queryset, slug=slug)
         comment = post.comment.filter(approved=True).order_by("-created")
@@ -79,7 +78,6 @@ class Details(View):
 
 
 class Like(View):
-    
     def post(self, request, slug,  *args, **kwargs):
         post = get_object_or_404(Post, slug=slug)
         if post.likes.filter(id=request.user.id).exists():

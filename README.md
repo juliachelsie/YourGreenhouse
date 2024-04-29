@@ -75,7 +75,7 @@ __Admin Panel__
 **HTML**
 
 **CSS**
-
+- No errors were returned when passing through the official [Jigsaw]()
 **Python**
 
 ### Testing via lighthouse

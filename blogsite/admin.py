@@ -2,6 +2,7 @@ from django.contrib import admin
 from .models import Post, CommentOn, Contact
 from django_summernote.admin import SummernoteModelAdmin
 
+
 @admin.register(Post)
 class AdminPost(SummernoteModelAdmin):
     prepopulated_fields = {'slug': ('title',)}

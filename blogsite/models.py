@@ -5,10 +5,12 @@ from cloudinary.models import CloudinaryField
 # Create your models here.
 STATUS = ((0, "Draft"), (1, "Published"))
 
+
 class Post(models.Model):
     title = models.CharField(max_length=200, unique=True)
     slug = models.SlugField(max_length=200, unique=True)
-    writer = models.ForeignKey(User, on_delete=models.CASCADE, related_name="posts")
+    writer = models.ForeignKey(User, on_delete=models.CASCADE,
+                               related_name="posts")
     updated = models.DateTimeField(auto_now=True)
     chosen_image = CloudinaryField('image', default='placeholder')
     content = models.TextField()
@@ -29,7 +31,7 @@ class Post(models.Model):
 
 class CommentOn(models.Model):
     post = models.ForeignKey(Post, on_delete=models.CASCADE,
-                            related_name="comment")
+                             related_name="comment")
     name = models.CharField(max_length=100)
     email = models.EmailField()
     created = models.DateTimeField(auto_now_add=True)

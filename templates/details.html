@@ -11,9 +11,9 @@
             </div>
             <div class="d-none d-md-block col-md-6 post-content-image">
                 {% if "placeholder" in post.chosen_image.url %}
-                <img src="/static/blog.jpg" width="100%">
+                <img src="/static/blog.jpg" alt="Blog Image" class="blog-image">
                 {% else %}
-                <img src="{{ post.chosen_image.url }}" width="100%">
+                <img src="{{ post.chosen_image.url }}" alt="Blog Image" class="blog-image">
                 {% endif %}
             </div>
         </div>
@@ -73,10 +73,11 @@
                 <div class="comments" style="padding: 10px;">
                     <p class="font-weight-bold">
                         <strong>{{ comment.name }}
-                        <span class=" text-muted font-weight-normal">
-                            {{ comment.created }}
-                        </span> wrote:
-                    </p> </strong>
+                            <span class=" text-muted font-weight-normal">
+                                {{ comment.created }}
+                            </span> wrote:
+                        </strong>
+                    </p>
                     {{ comment.body | linebreaks }}
                 </div> <hr>
                 {% endfor %}

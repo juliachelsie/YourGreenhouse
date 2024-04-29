@@ -1,6 +1,6 @@
 from django.contrib import admin
 from blogsite import views as contact_view
-from . import views 
+from . import views
 from django.urls import path
 
 urlpatterns = [
