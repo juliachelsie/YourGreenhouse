@@ -49,7 +49,7 @@ html {
 }
 
 .writer {
-    color: #1f1e1e;
+    color: #1f3a1e;
     margin: 4px;
     text-transform: uppercase;
 }
@@ -69,6 +69,11 @@ html {
 .card {
     border: #1f3a1e ;
     background-color: transparent;
+}
+
+.card-title {
+    margin-bottom: 15px;
+    color:#1f3a1e
 }
 
 #change-page {
@@ -117,10 +122,6 @@ html {
     text-decoration: none;
 }
 
-.card-title {
-    margin-bottom: 15px;
-    color:#1f1e1e
-}
 
 .btn-signup {
     border: #1f1e1e;
