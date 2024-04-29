@@ -16,7 +16,7 @@
                 {% blocktrans %}
                 Welcome to Your GreenHouse! Log in to join the community, and to like and comment the posts.
                 If you have not created an account yet, then please
-            <a href="{{ signup_url }}">sign up</a> first.{% endblocktrans %}
+            <a href="{{ signup_url }}">register</a> first.{% endblocktrans %}
             </p>
             {% url 'account_login' as login_url %}
             {% element form form=form method="post" action=login_url tags="entrance,login" %}

@@ -1,39 +1,54 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+# Your GreenHouse
+Your GreenHouse is a blog about houseplants and indoor plants. It is also a community that hopes to gather all plant-nerds. Users can read and get tips about plants while look at beautiful images. They can also register for an account and log in, and then like and comment the blog posts. 
 
-Welcome,
+## Existing Features 
 
-This is the Code Institute student template for Codeanywhere. If you are using Gitpod then you need [this template](https://github.com/Code-Institute-Org/gitpod-full-template) instead.  We have preinstalled all of the tools you need to get started. It's perfectly ok to use this template as the basis for your project submissions.
+__Header__
+- The website has a header with the text "Your GreenHouse" and a icon with a leaf. The text and the icon is in a dark green colour.
+![Header]()
 
-You can safely delete this README.md file, or change it for your own project. Please do read it at least once, though! It contains some important information about Codeanywhere and the extensions we use. Some of this information has been updated since the video content was created. The last update to this file was: **August 30th, 2023**
+__Navbar__
+- There is a navigation bar which is full responsive and includes five links to the logo, Home page, Blog posts, Contact page and to Register and sign in/log out.
+It is identical on all three pages for easy navigation. On the mobile version it collapses to a menu icon. The user can easily navigate between the pages without having to revert back to previous pages via the "back"-button.
+![Navbar]()
 
-## Codeanywhere Reminders
+__Landing page image__
+- The lanfing page includes a image with a Monstera Leaf, which is suitable since it is a website about plants. There is a welcome text that explains the website and a button that takes the user directly to the blog posts. 
+![Landing-page]()
 
-To run a frontend (HTML, CSS, Javascript only) application in Codeanywhere, in the terminal, type:
+__Footer__
+- The footer section includes links to social media sites for Your GreenHouse. To keep easy navigation for the user the links open in new tabs.
+![Footer]()
 
-`python3 -m http.server`
+__Blog Post Site__
+- The sites main functionality is the blog page. It contains all the posts with information about who wrote it, the number of likes and a image of the plant. The user can click on the post to read it.
+![Blog-page]()
 
-A button should appear to click: _Open Preview_ or _Open Browser_.
+__Blog post__
+- When the user has choose a blog post and clicked it they come to a more detailed page where they can read it, they can also see comments on the post. If they are logged in they can also like and comment themself. 
+![Blog-post]()
 
-To run a frontend (HTML, CSS, Javascript only) application in Codeanywhere with no-cache, you can use this alias for `python3 -m http.server`.
+__Comment__
+- The user can comment on blog posts. Their username, which date and time they commented will be shown. When they have clicked submit they will get a message that their comment is waiting for aproval.
+![Comment]()
+![Approval]()
 
-`http_server`
+__Contact Form__
+- There is a contact form where the user can fill out a form to contact the admin of "Your GreenHouse". They will enter their name, email, the subject and a message and then click submit. The message arrives in the admin panel where the admin can read the message. 
+![Contact-Form]()
 
-To run a backend Python file, type `python3 app.py`, if your Python file is named `app.py` of course.
+__Register got a account__
+- The user can register for a account to like and comment.
+![Register]()
 
-A button should appear to click: _Open Preview_ or _Open Browser_.
+__Log In__
+- If the user has an account they can log in. When the user has successfully logged in they get a message with the text "Successfully signed in as (Username)"
+![LogIn]()
 
-In Codeanywhere you have superuser security privileges by default. Therefore you do not need to use the `sudo` (superuser do) command in the bash terminal in any of the lessons.
+__Log Out__
+- The user can of course also log out. When the user has successfully logged out they get a message with the text "You have signed out"
+![Log out]()
 
-To log into the Heroku toolbelt CLI:
+__Admin Panel__
+- The website has a admin panel where the admin can handle all the blogposts. Post new blogpost, delete blog posts, approve new comments, verify email adresses, delete email adresses, read messages sent in via the contact form on the site. 
 
-1. Log in to your Heroku account and go to _Account Settings_ in the menu under your avatar.
-2. Scroll down to the _API Key_ and click _Reveal_
-3. Copy the key
-4. In Codeanywhere, from the terminal, run `heroku_config`
-5. Paste in your API key when asked
-
-You can now use the `heroku` CLI program - try running `heroku apps` to confirm it works. This API key is unique and private to you so do not share it. If you accidentally make it public then you can create a new one with _Regenerate API Key_.
-
----
-
-Happy coding!
