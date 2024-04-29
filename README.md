@@ -63,7 +63,7 @@ __Admin Panel__
 - On the background on the writer section for the blog posts I used #d6f2da.
 - When the user hoovers on the ogo i used #52a84f.
 - On the hearts i used #f5000.
-![Colour-scheme]()
+![Colour-scheme](https://github.com/juliachelsie/YourGreenhouse/blob/main/media/palett.PNG)
 
 **Typography**
 - I used Roboto, sans serif and Lato, sans serif
@@ -85,13 +85,13 @@ __Admin Panel__
 - I have tested how the website look on different screen sizes, here how it look:
 
 - Desktop
-![Desktop]()
+![Desktop](https://github.com/juliachelsie/YourGreenhouse/blob/main/media/desktop.PNG)
 
 - Tablet
-![Tablet]()
+![Tablet](https://github.com/juliachelsie/YourGreenhouse/blob/main/media/tablet.PNG)
 
 - Mobile
-![Mobile]()
+![Mobile](https://github.com/juliachelsie/YourGreenhouse/blob/main/media/mobile.PNG)
 
 ## Deployment
 
@@ -112,10 +112,10 @@ The live link can be found here - <>
 - I used the teaching materials from [Code Institute](https://codeinstitute.net/se/)
 - The palette was created on  [Coolors](https://coolors.co/)
 - I read about the plants and took information about them on:
-[Leafy Life](https://leafy-life.com/)
-[Southern Living](https://www.southernliving.com/)
-[Good Housekeeping](https://www.goodhousekeeping.com/)
-[Gardyn](https://mygardyn.com/)
+[Leafy Life](https://leafy-life.com/)|
+[Southern Living](https://www.southernliving.com/)|
+[Good Housekeeping](https://www.goodhousekeeping.com/)|
+[Gardyn](https://mygardyn.com/)|
 [Garderners World](https://www.gardenersworld.com/)
 
 ### Media
