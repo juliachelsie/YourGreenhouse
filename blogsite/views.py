@@ -4,6 +4,7 @@ from .models import Post
 from django.http import HttpResponseRedirect
 from .forms import CommentOnForm, ContactForm
 from django.contrib import messages
+from django.shortcuts import redirect
 
 
 def get_index(request):
@@ -85,7 +86,8 @@ class Like(View):
         else:
             post.likes.add(request.user)
 
-        return HttpResponseRedirect(reverse('details.html', args=[slug]))
+        # Redirect to the details view with the correct slug parameter
+        return redirect('details', slug=slug)
 
 
 def contact_view(request):
