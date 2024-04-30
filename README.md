@@ -80,11 +80,9 @@ __Admin Panel__
 
 ### Testing via lighthouse
 
-- Home page desktop :
-![Desktop](https://github.com/juliachelsie/YourGreenhouse/blob/main/media/index%20desktop.PNG)
+Home page desktop : ![Desktop](https://github.com/juliachelsie/YourGreenhouse/blob/main/media/index%20desktop.PNG)
 
-- Home page mobile : 
-![Mobile]()
+Home page mobile : ![Mobile](https://github.com/juliachelsie/YourGreenhouse/blob/main/media/index%20mobile.PNG)
 
 - Blog page desktop :
 ![Desktop]()
@@ -102,25 +100,25 @@ __Admin Panel__
 ![Desktop](https://github.com/juliachelsie/YourGreenhouse/blob/main/media/contact%20desktop.PNG)
 
 - Contact page mobile :
-![Mobile]
+![Mobile](https://github.com/juliachelsie/YourGreenhouse/blob/main/media/contact%20mobile.PNG)
 
 - Sign up page desktop:
 ![Desktop](https://github.com/juliachelsie/YourGreenhouse/blob/main/media/sign%20up%20desktop.PNG)
 
 - Sign up page mobile:
-![Mobile]()
+![Mobile](https://github.com/juliachelsie/YourGreenhouse/blob/main/media/sign%20up%20mobile.PNG)
 
 - Sign in page desktop :
 ![Desktop](https://github.com/juliachelsie/YourGreenhouse/blob/main/media/sign%20in%20desktop.PNG)
 
 - Sign in page mobile :
-![Mobile]()
+![Mobile](https://github.com/juliachelsie/YourGreenhouse/blob/main/media/sign%20in%20mobile.PNG)
 
 - Log out page desktop :
 ![Desktop](https://github.com/juliachelsie/YourGreenhouse/blob/main/media/log%20out%20desktop.PNG)
 
 - Log out page mobile :
-![Mobile]()
+![Mobile](https://github.com/juliachelsie/YourGreenhouse/blob/main/media/log%20out%20mobile.PNG)
 
 
 ### How does it look on different screen sizes?
@@ -154,6 +152,7 @@ The live link can be found here - <>
 ### Content
 - I used the teaching materials from [Code Institute](https://codeinstitute.net/se/)
 - The palette was created on  [Coolors](https://coolors.co/)
+- The icons i used for the website was taken from [Font Awesome](https://fontawesome.com/)
 - I read about the plants and took information about them on:
 [Leafy Life](https://leafy-life.com/)|
 [Southern Living](https://www.southernliving.com/)|
@@ -163,3 +162,4 @@ The live link can be found here - <>
 
 ### Media
 - All the images was taken from [FREEPIK](https://www.freepik.com/)
+- 
