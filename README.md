@@ -81,7 +81,7 @@ __Admin Panel__
 ### Testing via lighthouse
 
 - Home page desktop :
-![Desktop]()
+![Desktop](https://github.com/juliachelsie/YourGreenhouse/blob/main/media/index%20desktop.PNG)
 
 - Home page mobile : 
 ![Mobile]()
@@ -93,31 +93,31 @@ __Admin Panel__
 ![Mobile]()
 
 - Blog post desktop :
-![Desktop]()
+![Desktop](https://github.com/juliachelsie/YourGreenhouse/blob/main/media/comment%20desktop.PNG)
 
 - Blog post mobile :
-![Mobile]()
+![Mobile](https://github.com/juliachelsie/YourGreenhouse/blob/main/media/comment%20mobile.PNG)
 
 - Contact page desktop :
-![Desktop]()
+![Desktop](https://github.com/juliachelsie/YourGreenhouse/blob/main/media/contact%20desktop.PNG)
 
 - Contact page mobile :
 ![Mobile]
 
 - Sign up page desktop:
-![Desktop]()
+![Desktop](https://github.com/juliachelsie/YourGreenhouse/blob/main/media/sign%20up%20desktop.PNG)
 
 - Sign up page mobile:
 ![Mobile]()
 
 - Sign in page desktop :
-![Desktop]()
+![Desktop](https://github.com/juliachelsie/YourGreenhouse/blob/main/media/sign%20in%20desktop.PNG)
 
 - Sign in page mobile :
 ![Mobile]()
 
 - Log out page desktop :
-![Desktop]()
+![Desktop](https://github.com/juliachelsie/YourGreenhouse/blob/main/media/log%20out%20desktop.PNG)
 
 - Log out page mobile :
 ![Mobile]()
