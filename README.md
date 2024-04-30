@@ -75,10 +75,53 @@ __Admin Panel__
 **HTML**
 
 **CSS**
-- No errors were returned when passing through the official [Jigsaw]()
+- No errors were returned when passing through the official [Jigsaw](https://github.com/juliachelsie/YourGreenhouse/blob/main/media/css.PNG)
 **Python**
 
 ### Testing via lighthouse
+
+- Home page desktop :
+![Desktop]()
+
+- Home page mobile : 
+![Mobile]()
+
+- Blog page desktop :
+![Desktop]()
+
+- Blog page mobile :
+![Mobile]()
+
+- Blog post desktop :
+![Desktop]()
+
+- Blog post mobile :
+![Mobile]()
+
+- Contact page desktop :
+![Desktop]()
+
+- Contact page mobile :
+![Mobile]
+
+- Sign up page desktop:
+![Desktop]()
+
+- Sign up page mobile:
+![Mobile]()
+
+- Sign in page desktop :
+![Desktop]()
+
+- Sign in page mobile :
+![Mobile]()
+
+- Log out page desktop :
+![Desktop]()
+
+- Log out page mobile :
+![Mobile]()
+
 
 ### How does it look on different screen sizes?
 
