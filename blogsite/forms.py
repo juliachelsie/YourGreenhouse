@@ -9,7 +9,7 @@ class CommentOnForm(forms.ModelForm):
         fields = ('body',)
 
 
-class ContactForm(ModelForm):
+class ContactForm(forms.ModelForm):
     class Meta:
         model = Contact
-        fields = '__all__'
+        fields = ['name', 'subject', 'email', 'about']

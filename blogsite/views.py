@@ -87,7 +87,7 @@ class Like(View):
             post.likes.add(request.user)
 
         # Redirect to the details view with the correct slug parameter
-        return redirect('details', slug=slug)
+        return redirect('details.html', slug=slug)
 
 
 def contact_view(request):

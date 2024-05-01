@@ -1,16 +1,19 @@
-
 import unittest    
 from django.test import TestCase, RequestFactory
 from django.urls import reverse
 from django.contrib.auth.models import User
 from django.http import HttpRequest
 from django.shortcuts import render
+from django.utils import timezone
 from django.template.loader import render_to_string
 from django.core.exceptions import PermissionDenied
 from blogsite.models import Post, CommentOn, Contact
 from blogsite.views import Like, Details
+from blogsite.forms import CommentOnForm, ContactForm
 
-    # Test Post Class in models.py
+    # MODELS.PY
+
+    # Test Post Class in models.py.
 
 class PostModelTestCase(TestCase):
     @classmethod
@@ -55,7 +58,7 @@ class PostModelTestCase(TestCase):
         self.assertEqual(self.post.likes_number(), 1)
 
 
-    # Test for CommentOn Class in models.py
+    # Test for CommentOn Class in models.py.
 
 class CommentOnModelTestCase(TestCase):
     @classmethod
@@ -87,7 +90,7 @@ class CommentOnModelTestCase(TestCase):
         self.assertEqual(self.comment.name, 'Test User')
         self.assertEqual(self.comment.email, 'test@example.com')
         self.assertEqual(self.comment.body, 'Test comment body')
-        self.assertFalse(self.comment.approved)  # Ensure default value
+        self.assertFalse(self.comment.approved)
 
     def test_str_representation(self):
         """Test the string representation of a comment"""
@@ -120,7 +123,7 @@ class CommentOnModelTestCase(TestCase):
         self.assertEqual(ordered_comments[1], comment1)
         self.assertEqual(ordered_comments[2], comment2)
 
-    # Test for Contact Class in models.py
+    # Test for Contact Class in models.py.
 
 class ContactModelTestCase(TestCase):
     def test_contact_creation(self):
@@ -146,8 +149,9 @@ class ContactModelTestCase(TestCase):
         )
         self.assertEqual(str(contact), 'karen@example.com')
 
-    
-    # Test for Like Class from views.py
+    # VIEWS.PY
+
+    # Test for Like Class from views.py.
 
 class LikeViewTestCase(TestCase):
     @classmethod
@@ -200,3 +204,60 @@ class LikeViewTestCase(TestCase):
 
     # Test for Details Class from views.py
 
+class DetailsViewTestCase(TestCase):
+    def setUp(self):
+        # Create a test user
+        self.user = User.objects.create_user(username='testuser', password='12345')
+
+        # Create a test post
+        self.post = Post.objects.create(
+            title='Test Post',
+            slug='test-post',
+            writer=self.user,
+            content='Test content',
+            status=1,
+            created=timezone.now()  # Use timezone.now() to set the created field
+    )
+
+    # FORMS.PY
+
+    # Test for CommentOnForm from forms.py.
+
+class TestCommentOnForm(TestCase):
+    def test_valid_form(self):
+        form_data = {'body': 'Test comment'}
+        form = CommentOnForm(data=form_data)
+        self.assertTrue(form.is_valid())
+
+    def test_blank_data(self):
+        form = CommentOnForm(data={})
+        self.assertFalse(form.is_valid())
+        self.assertEqual(form.errors, {'body': ['This field is required.']})
+
+    def test_max_length(self):
+        max_length = CommentOn._meta.get_field('body').max_length
+        form_data = {'body': 'a' * (max_length + 1)}  # Exceed max length
+        form = CommentOnForm(data=form_data)
+        self.assertFalse(form.is_valid())
+        self.assertEqual(form.errors, {'body': [f'Ensure this value has at most {max_length} characters (it has {max_length + 1}).']})
+
+    # Test for ContactForm from forms.py.
+
+class TestContactForm(TestCase):
+    def test_valid_form(self):
+        form_data = {
+            'name': 'Test User',
+            'subject': 'Test Subject',
+            'email': 'test@example.com',
+            'about': 'Test About'
+        }
+        form = ContactForm(data=form_data)
+        self.assertTrue(form.is_valid())
+
+    def test_required_fields(self):
+        form = ContactForm(data={})  # Empty data dictionary
+        self.assertFalse(form.is_valid())
+        self.assertIn('name', form.errors)
+        self.assertIn('subject', form.errors)
+        self.assertIn('email', form.errors)
+        self.assertIn('about', form.errors)
