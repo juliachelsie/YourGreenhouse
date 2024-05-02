@@ -1,4 +1,4 @@
-import unittest    
+import unittest
 from django.test import TestCase, RequestFactory
 from django.urls import reverse
 from django.contrib.auth.models import User
@@ -11,15 +11,17 @@ from blogsite.models import Post, CommentOn, Contact
 from blogsite.views import Like, Details
 from blogsite.forms import CommentOnForm, ContactForm
 
-    # MODELS.PY
+# MODELS.PY
 
-    # Test Post Class in models.py.
+# Test Post Class in models.py.
+
 
 class PostModelTestCase(TestCase):
     @classmethod
     def setUpTestData(cls):
         # Create a user
-        cls.user = User.objects.create_user(username='test_user', password='password')
+        cls.user = User.objects.create_user
+        (username='test_user', password='password')
 
     def setUp(self):
         # Create a post
@@ -51,20 +53,22 @@ class PostModelTestCase(TestCase):
         self.assertEqual(self.post.likes_number(), 0)
 
         # Add a like
-        user_liking_post = User.objects.create_user(username='liking_user', password='password')
+        user_liking_post = User.objects.create_user
+        (username='liking_user', password='password')
         self.post.likes.add(user_liking_post)
 
         # The number of likes should now be 1
         self.assertEqual(self.post.likes_number(), 1)
 
+# Test for CommentOn Class in models.py.
 
-    # Test for CommentOn Class in models.py.
 
 class CommentOnModelTestCase(TestCase):
     @classmethod
     def setUpTestData(cls):
         # Create a user for testing
-        cls.user = User.objects.create_user(username='test_user', email='test@example.com', password='password')
+        cls.user = User.objects.create_user
+        (username='test_user', email='test@example.com', password='password')
         # Create a post for testing
         cls.post = Post.objects.create(
             title='Test Post',
@@ -125,6 +129,7 @@ class CommentOnModelTestCase(TestCase):
 
     # Test for Contact Class in models.py.
 
+
 class ContactModelTestCase(TestCase):
     def test_contact_creation(self):
         """Test that a contact is created correctly"""
@@ -153,11 +158,13 @@ class ContactModelTestCase(TestCase):
 
     # Test for Like Class from views.py.
 
+
 class LikeViewTestCase(TestCase):
     @classmethod
     def setUpTestData(cls):
         # Create a test user
-        cls.user = User.objects.create_user(username='test_user', email='test@example.com', password='password')
+        cls.user = User.objects.create_user
+        (username='test_user', email='test@example.com', password='password')
 
         # Create a test post
         cls.post = Post.objects.create(
@@ -173,8 +180,9 @@ class LikeViewTestCase(TestCase):
         self.factory = RequestFactory()
 
     def test_post_like(self):
-    # Simulate a POST request to like the post
-        request = self.factory.post(reverse('like', kwargs={'slug': 'test-post'}))
+        # Simulate a POST request to like the post
+        request = self.factory.post(reverse('like',
+                                    kwargs={'slug': 'test-post'}))
         request.user = self.user  # Set the request user
         response = Like.as_view()(request, slug='test-post')
 
@@ -182,8 +190,10 @@ class LikeViewTestCase(TestCase):
         self.assertTrue(self.post.likes.filter(id=self.user.id).exists())
 
         # Check if the response redirects to the correct URL
-        self.assertEqual(response.status_code, 302)  # 302 is the status code for redirection
-        self.assertEqual(response.url, reverse('details', kwargs={'slug': 'test-post'}))
+        # 302 is the status code for redirection
+        self.assertEqual(response.status_code, 302)
+        self.assertEqual(response.url,
+                         reverse('details', kwargs={'slug': 'test-post'}))
 
     def test_post_unlike(self):
         """Test unliking a post"""
@@ -191,7 +201,8 @@ class LikeViewTestCase(TestCase):
         self.post.likes.add(self.user)
 
         # Simulate a POST request to unlike the post
-        request = self.factory.post(reverse('like', kwargs={'slug': 'test-post'}))
+        request = self.factory.post(reverse('like',
+                                    kwargs={'slug': 'test-post'}))
         request.user = self.user  # Set the request user
         response = Like.as_view()(request, slug='test-post')
 
@@ -199,15 +210,18 @@ class LikeViewTestCase(TestCase):
         self.assertFalse(self.post.likes.filter(id=self.user.id).exists())
 
         # Check if the response redirects to the correct URL
-        self.assertEqual(response.status_code, 302)  # 302 is the status code for redirection
-        self.assertEqual(response.url, reverse('details', kwargs={'slug': 'test-post'}))
+        self.assertEqual(response.status_code, 302)
+        self.assertEqual(response.url,
+                         reverse('details', kwargs={'slug': 'test-post'}))
 
     # Test for Details Class from views.py
+
 
 class DetailsViewTestCase(TestCase):
     def setUp(self):
         # Create a test user
-        self.user = User.objects.create_user(username='testuser', password='12345')
+        self.user = User.objects.create_user
+        (username='testuser', password='12345')
 
         # Create a test post
         self.post = Post.objects.create(
@@ -216,12 +230,13 @@ class DetailsViewTestCase(TestCase):
             writer=self.user,
             content='Test content',
             status=1,
-            created=timezone.now()  # Use timezone.now() to set the created field
-    )
+            created=timezone.now()
+        )
 
     # FORMS.PY
 
     # Test for CommentOnForm from forms.py.
+
 
 class TestCommentOnForm(TestCase):
     def test_valid_form(self):
@@ -239,9 +254,12 @@ class TestCommentOnForm(TestCase):
         form_data = {'body': 'a' * (max_length + 1)}  # Exceed max length
         form = CommentOnForm(data=form_data)
         self.assertFalse(form.is_valid())
-        self.assertEqual(form.errors, {'body': [f'Ensure this value has at most {max_length} characters (it has {max_length + 1}).']})
+        self.assertEqual(form.errors, {'body':
+                         [f'Ensure this value has at most {max_length}
+                          characters(it has {max_length + 1}).']})
 
     # Test for ContactForm from forms.py.
+
 
 class TestContactForm(TestCase):
     def test_valid_form(self):

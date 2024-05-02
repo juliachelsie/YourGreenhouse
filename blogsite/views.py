@@ -43,7 +43,7 @@ class Details(View):
                 "comment": comment,
                 "commented": False,
                 "liked": liked,
-                "comment_on_form" : CommentOnForm()
+                "comment_on_form": CommentOnForm()
             },
         )
 
@@ -72,7 +72,7 @@ class Details(View):
                 "post": post,
                 "comment": comment,
                 "commented": True,
-                "comment_on_form" : comment_on_form,
+                "comment_on_form": comment_on_form,
                 "liked": liked,
             },
         )
