@@ -85,7 +85,7 @@ __Admin Panel__
 ### Testing via validators
 
 **HTML**
-- I found four errors in the signup.html, but they are in the allauth code. I don't know how to fix that without interfere with the already fixed allauth code. Otherwise there were no errors or warnings in the rest of the html code i tested in the official [W3C validator](https://validator.w3.org/nu/)
+- I found four errors in the signup.html, but they are in the django allauth code. I don't know how to fix that without interfere with the already fixed allauth code. Otherwise there were no errors or warnings in the rest of the html code i tested in the official [W3C validator](https://validator.w3.org/nu/)
 
 **CSS**
 - No errors were returned when passing through the official [Jigsaw](https://github.com/juliachelsie/YourGreenhouse/blob/main/media/css.PNG)
@@ -94,7 +94,7 @@ __Admin Panel__
 - No errors were returned when passing through the [CI Python Linter](https://pep8ci.herokuapp.com/)
 
 **Javascript**
--No errors were returned when passing through the [JSHint](https://jshint.com/)
+- No errors were returned when passing through the [JSHint](https://jshint.com/)
 
 ### Testing via lighthouse
 
@@ -143,6 +143,11 @@ __Admin Panel__
 ### Testing with unittests in Python/Django.
 - I have also used django unittest to test all my code in models.py, views.py, urls.py and forms.py. The tests are all located in tests.py. 
 
+### Unfixed bugs
+- There are no unfixed bugs.
+
+### Fixed bugs
+- I tried to get the links to all the pages in the navbar to softly change colour from a dark green to a light green when the user hoovers on them, but it did not work with the class names. I fixed it by putting a id on every link instead. It looks a little messy in the css but i could not find an other way to make it work. But in the end it is worth it because it looks so pretty when it changes colour. It also goes hand in hand with the logo that also changes colur when the user hovers on it. 
 
 ### How does it look on different screen sizes?
 

@@ -7,6 +7,13 @@ html {
     background-size: cover;
 }
 
+.bg-white {
+    background-color: #fff !important;
+    border-color: #1f3a1e;
+}
+
+ /* Navbar */
+
 .navbar-logo {
     font-size: 1.7rem;
     font-weight: 500;
@@ -19,9 +26,22 @@ html {
     transition: all 0.3s linear;
 }
 
-.navbar {
-    border-bottom-style: groove;
+#homehover, #bloghover, #contacthover, #loginhover, #signuphover, #logouthover {
+    color: #1f3a1e;
+    text-decoration: none;
 }
+
+#homehover:hover, #bloghover:hover, #contacthover:hover,
+#loginhover:hover, #signuphover:hover, #logouthover:hover {
+    color:#52a84f;
+    transition: all 0.3s linear;
+}
+
+.navbar {
+    border-bottom-style: inset;
+}
+
+ /* Welcome text on index.html */
 
 #about {
     padding-top: 170px;
@@ -47,6 +67,13 @@ html {
     transition: all 0.3s linear;
     font-size: 17px;
 }
+
+.content-link:hover {
+    color:#52a84f;
+    transition: all 0.3s linear;
+}
+
+/* Blog posts on post.html */
 
 .writer {
     color: #1f3a1e;
@@ -84,6 +111,8 @@ html {
     text-decoration: none;
     font-size: 20px;
 }
+
+/* Blog posts-details in details.html */ 
 
 .post-content {
     margin-top: 10px;
@@ -131,6 +160,8 @@ html {
     border: #1f1e1e;
 }
 
+/* like-button */
+
 .like-button {
     color: #f50000;
     background: transparent;
@@ -145,7 +176,7 @@ html {
 
 }
 
-/* About page */
+/* contact.html with contact-from */
 
 #contact {
     padding-top: 170px;
@@ -159,13 +190,17 @@ html {
 /* Footer */
 
 footer {
-    border-top-style: groove;
+    border-top-style: outset;
 }
 .follow {
     color: #1f3a1e
 }
 
-.follow a:hover {
+.fa-brands {
+    color: #1f3a1e;
+}
+
+.fa-brands:hover {
     color:#52a84f;
     transition: all 0.3s linear;
- }
+}
