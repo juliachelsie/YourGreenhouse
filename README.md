@@ -144,7 +144,7 @@ __Admin Panel__
 - I have also used django unittest to test all my code in models.py, views.py, urls.py and forms.py. The tests are all located in tests.py. 
 
 ### Unfixed bugs
-- There are no unfixed bugs.
+- When loading post.html lighthouse give me pretty bad "performance numbers" on both mobile and desktop devices. I think this is because the images are to big and it takes time to load. I would like to fix this issue by scaling the images down. 
 
 ### Fixed bugs
 - I tried to get the links to all the pages in the navbar to softly change colour from a dark green to a light green when the user hoovers on them, but it did not work with the class names. I fixed it by putting a id on every link instead. It looks a little messy in the css but i could not find an other way to make it work. But in the end it is worth it because it looks so pretty when it changes colour. It also goes hand in hand with the logo that also changes colur when the user hovers on it. 
