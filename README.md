@@ -144,10 +144,10 @@ __Admin Panel__
 - I have also used django unittest to test all my code in models.py, views.py, urls.py and forms.py. The tests are all located in tests.py. 
 
 ### Unfixed bugs
-- When loading post.html lighthouse give me pretty bad "performance numbers" on both mobile and desktop devices. I think this is because the images are to big and it takes time to load. I would like to fix this issue by scaling the images down. 
+- When loading post.html lighthouse give me pretty bad "performance numbers" on both mobile and desktop devices. I think this is because the images are to large and they take a while to load. I would like to fix this issue by scaling the images down in size, when i have access to a affordable image editing service.
 
 ### Fixed bugs
-- I tried to get the links to all the pages in the navbar to softly change colour from a dark green to a light green when the user hoovers on them, but it did not work with the class names. I fixed it by putting a id on every link instead. It looks a little messy in the css but i could not find an other way to make it work. But in the end it is worth it because it looks so pretty when it changes colour. It also goes hand in hand with the logo that also changes colur when the user hovers on it. 
+- I tried to get the links to all the pages in the navbar to softly change colour from a dark green to a light green when the user hoovers on them, but it did not work with the class names. I fixed it by putting a id on every link instead. It looks a little messy in the css but i could not find an other way to make it work. But in the end it is worth it because it looks so pretty when it changes colour. It also goes hand in hand with the logo that also changes colour when the user hovers on it. 
 
 ### How does it look on different screen sizes?
 
@@ -179,6 +179,7 @@ The live link can be found here - <>
 
 ### Content
 - I used the teaching materials from [Code Institute](https://codeinstitute.net/se/)
+- I read about how to write and how to run tests on [django](https://docs.djangoproject.com/en/5.0/topics/testing/overview/)
 - The palette was created on  [Coolors](https://coolors.co/)
 - The icons i used for the website was taken from [Font Awesome](https://fontawesome.com/)
 - I got the favicon from [favicon.io](https://favicon.io/)
@@ -188,6 +189,7 @@ The live link can be found here - <>
 [Good Housekeeping](https://www.goodhousekeeping.com/) | 
 [Gardyn](https://mygardyn.com/) and
 [Garderners World](https://www.gardenersworld.com/)
+
 
 ### Media
 - All the images was taken from [FREEPIK](https://www.freepik.com/).
