@@ -1,6 +1,8 @@
 # Your GreenHouse
 Your GreenHouse is a blog about houseplants and indoor plants. It is also a community that hopes to gather all plant-nerds. Users can read and get tips about plants while look at beautiful images. They can also register for an account and log in, and then like and comment the blog posts. 
 
+The live link can be found here - <https://yourgreenhouse-3e5e0acbd3b4.herokuapp.com/>
+
 ## Existing Features 
 
 __Header__
@@ -143,6 +145,11 @@ __Admin Panel__
 ### Testing with unittests in Python/Django.
 - I have also used django unittest to test all my code in models.py, views.py, urls.py and forms.py. The tests are all located in tests.py. 
 
+## Different web browsers.
+
+- I have tested it on Microsoft Edge and it works with no problems.
+- I have tested it on Google Chrome and it  wors with no problems.
+
 ### Unfixed bugs
 - When loading post.html lighthouse give me pretty bad "performance numbers" on both mobile and desktop devices. I think this is because the images are to large and they take a while to load. I would like to fix this issue by scaling the images down in size, when i have access to a affordable image editing service.
 
@@ -173,7 +180,7 @@ __Admin Panel__
   I linked the Heroku app to the repository.
   I clicked on deploy.
 
-The live link can be found here - <>
+The live link can be found here - <https://yourgreenhouse-3e5e0acbd3b4.herokuapp.com/>
 
 ## Credits
 
