@@ -86,11 +86,16 @@ __Admin Panel__
 
 **HTML**
 - I found four errors in the signup.html, but they are in the allauth code. I don't know how to fix that without interfere with the already fixed allauth code. Otherwise there were no errors or warnings in the rest of the html code i tested in the official [W3C validator](https://validator.w3.org/nu/)
+
 **CSS**
 - No errors were returned when passing through the official [Jigsaw](https://github.com/juliachelsie/YourGreenhouse/blob/main/media/css.PNG)
 
 **Python**
-- No error were returned when passing through the [CI Python Linter](https://pep8ci.herokuapp.com/)
+- No errors were returned when passing through the [CI Python Linter](https://pep8ci.herokuapp.com/)
+
+**Javascript**
+-No errors were returned when passing through the [JSHint](https://jshint.com/)
+
 ### Testing via lighthouse
 
 - Index.html desktop : 
@@ -135,6 +140,9 @@ __Admin Panel__
 - Logout.html mobile : 
 ![Mobile](https://github.com/juliachelsie/YourGreenhouse/blob/main/media/log%20out%20mobile.PNG)
 
+### Testing with unittests in Python/Django.
+- I have also used django unittest to test all my code in models.py, views.py, urls.py and forms.py. The tests are all located in tests.py. 
+
 
 ### How does it look on different screen sizes?
 
@@ -170,11 +178,11 @@ The live link can be found here - <>
 - The icons i used for the website was taken from [Font Awesome](https://fontawesome.com/)
 - I got the favicon from [favicon.io](https://favicon.io/)
 - I read about the plants and took information about them on:
-[Leafy Life](https://leafy-life.com/)|
-[Southern Living](https://www.southernliving.com/)|
-[Good Housekeeping](https://www.goodhousekeeping.com/)|
-[Gardyn](https://mygardyn.com/)|
+[Leafy Life](https://leafy-life.com/) | 
+[Southern Living](https://www.southernliving.com/) | 
+[Good Housekeeping](https://www.goodhousekeeping.com/) | 
+[Gardyn](https://mygardyn.com/) and
 [Garderners World](https://www.gardenersworld.com/)
 
 ### Media
-- All the images was taken from [FREEPIK](https://www.freepik.com/)
+- All the images was taken from [FREEPIK](https://www.freepik.com/).
