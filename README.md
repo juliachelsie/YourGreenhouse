@@ -105,10 +105,10 @@ __Admin Panel__
 ![Mobile](https://github.com/juliachelsie/YourGreenhouse/blob/main/media/index%20mobile.PNG)
 
 - Post.html desktop : 
-![Desktop]()
+![Desktop](https://github.com/juliachelsie/YourGreenhouse/blob/main/media/post%20desktop.PNG)
 
 - Post.html mobile : 
-![Mobile]()
+![Mobile](https://github.com/juliachelsie/YourGreenhouse/blob/main/media/post%20mobile.PNG)
 
 - Details.html desktop : 
 ![Desktop](https://github.com/juliachelsie/YourGreenhouse/blob/main/media/comment%20desktop.PNG)
